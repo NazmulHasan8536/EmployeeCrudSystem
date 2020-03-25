@@ -6,7 +6,26 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
+
+
+
             <div class="card">
+
+
+                <h2 class="card-header text-center text-success text-bold text-uppercase" style="font-family:tahoma;">Create Employee</h2>
+                 {{-- alert  --}}
+
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+
                 {{-- <div class="card-header">{{ __('Register') }}</div> --}}
 
                 <div class="card-body">
