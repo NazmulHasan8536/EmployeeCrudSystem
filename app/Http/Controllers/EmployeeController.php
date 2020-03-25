@@ -37,23 +37,21 @@ class EmployeeController extends Controller
 
         // dd($data);
 
-        $category = DB::table('employees')->insert($data);
+        $employee = DB::table('employees')->insert($data);
         // dd($category);
 
-        if($category){
+        if($employee){
             $notification = array(
                 'message'=>'Successfully Category Inserted',
                 'alert-type'=>'success'
             );
             return Redirect()->route('Employee.index')->with($notification); 
-        }else{
             $notification = array(
                 'message'=>'Something Went wrong',
                 'alert-type'=>'Error'
             );
-            return Redirect()->back()->with($notification); 
-        // return redirect()->route('home');
-    }
+            return Redirect()->route('Employee.index')->with($notification); //redirect(পেইজ এর নাম)
+        }
 }
 
 

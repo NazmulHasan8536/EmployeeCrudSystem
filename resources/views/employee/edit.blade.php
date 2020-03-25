@@ -9,6 +9,8 @@
             <div class="card">
                 {{-- <div class="card-header">{{ __('Register') }}</div> --}}
 
+                <h2 class="card-header text-center text-success text-bold text-uppercase" style="font-family:tahoma;">Edit Employee</h2>
+
                 <div class="card-body">
                 <form method="POST" action="{{url('Employee/update/'.$employee->id)}}">
                         @csrf

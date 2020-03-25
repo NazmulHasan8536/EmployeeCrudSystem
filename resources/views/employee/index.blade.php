@@ -4,9 +4,22 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="employee mb-3">
-                <a href="{{route('Employee.create')}}" class="btn btn-outline-primary">Add New Employee</a>
+
+
+
+
+           
+
+            <div class="row">
+                <div class="employee mb-4 col-md-6 text-left">
+                    <a href="{{route('IndexPost')}}" class="btn btn-outline-dark">All Post</a>
+                </div>
+                <div class="employee mb-4 col-md-6 text-right">
+                    <a href="{{route('Employee.create')}}" class="btn btn-outline-primary">Add New Employee</a>
+                </div>
+               
             </div>
+            
        
             <div class="card">
                 <div class="card-header">All Employess</div>
@@ -51,4 +64,8 @@
 </div>
 </div>
 </div>
+
+
+
+
 @endsection

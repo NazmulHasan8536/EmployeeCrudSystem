@@ -29,3 +29,15 @@ Route::resource('Employee', 'EmployeeController')->except('edit','destroy','upda
 route::get('Employeee/edit/{id}','EmployeeController@editEmployee');
 Route::post('Employee/update/{id}','EmployeeController@updateEmployee')->name('updateEmployee');
 route::get('Employee/delete/{id}','EmployeeController@deleteEmployee');
+
+// post route 
+
+route::prefix('post')->group(function(){
+    route::get('create-post','PostController@create')->name('CreatePost');
+    route::post('store-post','PostController@store')->name('StorePost');
+    route::get('index-post','PostController@index')->name('IndexPost');
+    route::get('/view/{id}','PostController@view');
+    route::get('/edit/{id}','PostController@edit');
+    route::post('/update/{id}','PostController@update');
+    route::get('/delete/{id}','PostController@destroy');
+});
